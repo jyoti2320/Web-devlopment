@@ -1,0 +1,865 @@
+<html>
+<head>
+<title>DESIGN...</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<style>
+     *{
+         margin: 0;
+         padding: 0;
+     }
+     .header{
+		background-image:linear-gradient(rgba(0,168,255,0.3),rgba(0,168,255,0.3)) ,url("offic.jpg");
+        width:100%;
+        height: 100%;
+		background-repeat:no-repeat;
+		background-size:cover;
+        clip-path: polygon(100% 0,100% 75%,50% 100%,0 75%,0 0);
+        position: relative;
+    }
+    .header :before{
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        content: "";
+        z-index: -1;
+        left: 0;
+        bottom: 0;
+        background:linear-gradient(to right, #1e5799 0% ,#3ccdbb 0%,#16c9f6 100%);
+        opacity: .05;
+    }
+    .navbar :before{
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        content: "";
+        z-index: -1;
+        left: 0;
+        bottom: 0;
+        background:linear-gradient(to right, #1e5799 0% ,#3ccdbb 0%,#16c9f6 100%);
+        opacity: .05;
+    }
+    a{
+        text-decoration: none;
+    }
+    .nav-item a{
+        font-weight: bold;
+        color: white !important;
+    }
+    a{
+    list-style: none;
+    }
+    a:hover{
+        text-decoration: none;
+    }
+    p{
+      font-weight: 400;
+      font-size: 0.9rem;
+      color: #606060;
+      line-height: 1.6;
+    }
+    .button a{
+      border: 1px solid white;
+      border-radius: 100px;
+      margin: 0 5px;
+      padding: 11px 35px;
+      color: white;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.4;
+      text-align: center;
+
+    }
+    .button a:hover{
+      color: black;
+      background: white;
+      text-decoration: none;
+      box-shadow: 0 0 20px 0 rgba(0 ,0, 0,0.3 );
+    }
+    p{
+      font-size: 1rem;
+      padding: 10px 0 20px 0 ;
+      color:white;
+    }
+    .extra-header{
+        width: 100%;
+        height: auto;
+        margin: 100px 0;
+        text-align: center;
+    }
+    .extra-div{
+        background: white;
+        border: medium none;
+        padding: 50px !important;
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .extra-div h1 , .servicediv h2{
+        font-size: 0.9rem;
+        margin: 20px 0 15px 0;
+        font-weight: bold;
+        line-height: 1.1;
+        word-spacing: 4px;
+
+    }
+    .extra-div:hover{
+        box-shadow: 0 0 20px 0 rgba(0 ,0, 0,0.3 );
+        transform: translateY(-20px);
+    }
+    .offset{
+      background: #f7f7f9;
+      padding: 50px 0;
+      margin-bottom:50px ;
+    }
+    .headings{
+      margin-bottom: 50px;
+    }
+    .headings h1{
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .names h1{
+      font-weight: bold;
+      color: #2e2e2e;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+    }
+    .serviceicon{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .progress{
+      margin-bottom: 25px !important;
+      background: #606060;
+      height: 0.6rem !important;
+    }
+    i{
+      color: #2fccda;
+    }
+    .project-work{
+      margin: 100px 0;
+    }
+    .project-work h1{
+      font-size: 2rem;
+      text-align: center;
+    }
+    .pricing{
+      width:100%;
+      height: 100vh;
+      padding: 50px;
+      position: relative;
+    }
+    .pricing ::before{
+        position: absolute;
+        right: 0;
+        top: 0%;
+        content: "";
+        z-index: -1;
+        left: 0;
+        bottom: 0%;
+        background:linear-gradient(330deg, #16c9f6 100%,#fff 0% );
+        
+    }
+    .money{
+      font-size: 40px;
+      line-height: 1;
+      color: #606060;
+    }
+    .card{
+      transition: 0.4s ease;
+    
+    }
+    .card-header{
+      font-size: 1.6rem;
+      font-weight: bold;
+      background: #fff;
+      padding: 25px 9!important;
+    }
+    .card-body li{
+      list-style: none;
+      margin: 10px 0;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #606060;
+    }
+    .card-footer{
+      background: #fff!important;
+      padding: 30px 0px !important;
+    }
+     .card-footer a{
+      border: 1px solid #50d1c0;
+      border-radius: 100px;
+      margin: 0 5px;
+      padding: 11px 35px;
+      color:#50d1c0;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.4;
+      text-align: center;
+
+    }
+    .card:hover .card-footer a{
+      color:#fff;
+      background: #50d1c0;
+      text-decoration: none;
+      box-shadow: 0 0 20px 0 rgba(0 ,0, 0,0.3 );
+    }
+    .card:hover{
+   
+
+      box-shadow: 0 0 20px 0 rgba(0 ,0, 0,0.3 );
+    }
+
+    .card:hover .card-header , .card:hover .money  {
+      color:#50d1c0;
+    }
+    .happyclient{
+      width: 100%;
+      height: 100vh;
+      padding: 80px 0;
+    }
+    .box{
+      text-align: center;
+      box-shadow: 0 5px 10px 0 rgba(0 ,0, 0,0.3 );
+      border: 1px solid rgba(0 ,0, 0,0.2 );
+      border-radius: 2px;
+      transition: 0.3s ease;
+    }
+    .box:hover{
+      background: #16c9f6;
+    }
+    .box:hover h6{
+      color: white;
+    }
+    .carousel-indicators{
+      position: absolute;
+      right: 0;
+      bottom: 0px !important;
+  }
+  .carousel-indicators li{
+      background-color: #16c9f6;
+  }
+  .box a{
+    position: relative;
+  }
+  .box a img{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+  }
+  .box h1{
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 10px;
+  }
+  .box h2{
+    font-size: 13px;
+    font-weight: 400;
+    color: #666666;
+    margin-bottom: 30px;
+  }
+  .contact{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding: 80px 0;
+  }
+  .contact::before{
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top:0;
+    position: absolute;
+    z-index: -1;
+    background: linear-gradient(330deg ,#16c9f6 55% , #fff 0%);
+
+  }
+  .form-btn{
+    border: 1px solid white;
+      border-radius: 100px;
+      margin: 0 5px;
+      padding: 11px 35px;
+      color:white;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.4;
+      
+}
+.form-btn:hover{
+  background: white;
+  box-shadow: 0 0 20px 0 rgba(0 ,0, 0,0.3 );
+  color: #16c9f6;
+}
+.News{
+  width: 100%;
+  height: auto;
+  margin: 80px auto;
+}
+.new-letter{
+  min-width: 150px;
+  min-height: 45px;
+}
+.input-group-text{
+
+  min-width: 130px;
+  min-height: 40px;
+  color: white !important;
+  background: #5bc0de !important;
+  right: 500px;
+
+}
+.footer{
+
+background: #16c9f6;
+padding-top: 70px;
+padding-bottom: 70px;
+
+}	
+.footer li{
+  list-style: none;
+  color: white;
+}
+.footer h6{
+  color: white;
+}
+
+</style>
+</head>
+<body>
+    <div class="header">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container">
+            <a class="navbar-brand text-white p-2 font-weight-bold" href="#">WebDevloper</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto" text-uppercase>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">service</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">price</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">about</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">contact</a>
+                  </li>
+                </ul>
+                </div>
+            </div>
+          </nav>
+      
+          <section class="center-head">
+          <div class="head text-white">
+            <center><font size="40px" class="font-weight-bold">We are The Web Devloper</font>
+              <p>we create the world best website..</p>
+              <div class="button">
+              <a href="#">about</a>
+              <a href="#">contact</a>
+              </div>
+              </center>
+          </div>
+          </section>
+      </div>
+    
+      <section class="extra-header">
+        <div class="container">
+        <div class=row>
+          <div class= "extra-div col-md-4">
+            <i class="fa-3x fa fa-desktop" aria-hidden="true"></i>
+              <h1>Easy to Use</h1>
+              <h6>A desktop is a term commonly used to describe a desktop computer or system unit.
+               When referring to an operating system or GUI (graphical user interface),
+                the desktop is a system of organization of icons on a screen.</h6>
+          </div>
+  
+          <div class= "extra-div col-md-4">
+            <i class="fa-3x fa fa-trophy" aria-hidden="true"></i>
+              <h1>Awasome Videos</h1>
+              <h6>A desktop is a term commonly used to describe a desktop computer or system unit.
+               When referring to an operating system or GUI (graphical user interface),
+                the desktop is a system of organization of icons on a screen.</h6>
+          </div>
+          
+  
+          <div class=" extra-div col-md-4">
+            <i class="fa-3x fa fa-magic" aria-hidden="true"></i>
+              <h1>Easy to Costomize</h1>
+              <h6>A desktop is a term commonly used to describe a desktop computer or system unit.
+               When referring to an operating system or GUI (graphical user interface),
+                the desktop is a system of organization of icons on a screen.</h6>
+          </div>
+          
+            </div>
+          </div>
+        </section>
+  
+        <section class="offset">
+            <div class= "container headings text-center">
+                <h1 class="text-center font-weight-bold">WHAT DO WE OFFER</h1>
+                <h6 class="text-center"> A desktop is a term commonly used to describe a desktop computer or system unit.</h6>
+            </div>
+            <div class="container">
+            <div class="row">
+                    <div class="col-lg-6 col-md-12 col-12 offset-1 offset-lg-0">
+                        <div class="names my-3">
+                            <h1>HTML</h1>
+                            <div class="progress w-75">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:100%">100%</div>
+                              </div>
+                              <h1>CSS</h1>
+                               <div class="progress w-75">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width:70%">70%</div>
+                              </div>
+                              <h1>JAVASCRIPT</h1>
+                              <div class="progress w-75">
+                               <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width:85%">85%</div>
+                             </div>
+                             <h1>BOOTSTRAP</h1>
+                             <div class="progress w-75">
+                              <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width:80%">80%</div>
+                            </div>
+                          
+                          <h1>PHP</h1>
+                          <div class="progress w-75">
+                           <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" style="width:90%">90%</div>
+                         </div>
+
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-12 offset-1 offset-lg-0 servicediv ">
+                          <div class="row">
+                              <div class="col-lg-2 col-2 serviceicon">
+                                <i class="fa-3x fa fa-desktop" aria-hidden="true"></i>
+                              </div>
+                              <div class="col-lg-10 col-10">
+                                <h2>Website Devlopment</h2>
+                                <h6> A desktop is a term commonly used to describe a desktop computer or system unit.</h6>
+                              </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="col-lg-2 col-2 serviceicon">
+                              <i class="fa-3x fa fa-wifi" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-lg-10 col-10">
+                              <h2>Digital Marketing</h2>
+                              <h6> A desktop is a term commonly used to describe a desktop computer or system unit.</h6>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                          <div class="col-lg-2 col-2 serviceicon">
+                            <i class="fa-3x fa fa-phone" aria-hidden="true"></i>
+                          </div>
+                          <div class="col-lg-10 col-10">
+                            <h2>Support 24/7</h2>
+                            <h6> A desktop is a term commonly used to describe a desktop computer or system unit.</h6>
+                          </div>
+                      </div>
+                    </div>
+                   </div>
+             </div>
+            </section>
+  
+
+            <section class="project-work">
+              <div class= "container headings text-center">
+                  <h6 class="text-center font-weight-bold">MORE THAN 2000 WEBSITE CREATED</h6>
+                 
+              </div>
+              <div class="container d-flex justify-content-around align-items-center text-center">
+                <div>
+                  <h1 class="count">1500</h1>
+                  <h6>CMS Installing</h6>
+                  </div>
+                  <div>
+                  <h1 class="count">2500</h1>
+                  <h6>Awards Won</h6>
+                  </div>
+
+                  <div>
+                  <h1 class="count">700</h1>
+                  <h6>Happy Client</h6>
+                  </div>
+
+                  <div>
+                  <h1 class="count">500</h1>
+                  <h6>Working On</h6>
+                  </div>
+      
+              </div>
+
+
+
+         </section>
+    
+         <section class="pricing">
+          <div class= "container">
+          <div class=  "headings text-center">
+              <h1 class="text-center font-weight-bold text-white">OUR BEST PRICING</h1>
+          </div>
+      
+       <div class="row">
+           <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-header"> BASIC </div>
+                <div class="card-body">
+                  <li>$<span class="money">20</span>/Website</li>
+                  <li>Responsive Websites</li>
+                  <li>Domain Name Free</li>
+                  <li>Mobile Friendly</li>
+                  <li>Webmail Support</li>
+                  <li>Customer Support 24/7</li>
+                </div>
+                <div class="card-footer">
+                    <a href="add">purchase</a>
+                </div>
+              </div>
+              
+           </div>
+
+           <div class="col-md-4">
+            <div class="card text-center second-card">
+                <div class="card-header"> STANDARD </div>
+                <div class="card-body">
+                  <li>$<span class="money">40</span>/Website</li>
+                  <li>Responsive Websites</li>
+                  <li>Domain Name Free</li>
+                  <li>Mobile Friendly</li>
+                  <li>Webmail Support</li>
+                  <li>Customer Support 24/7</li>
+                </div>
+                <div class="card-footer">
+                    <a href="add">purchase</a>
+                </div>
+              </div>
+              
+           </div>
+
+
+           <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-header"> UNLIMITED </div>
+                <div class="card-body">
+                  <li>$<span class="money">60</span>/Website</li>
+                  <li>Responsive Websites</li>
+                  <li>Domain Name Free</li>
+                  <li>Mobile Friendly</li>
+                  <li>Webmail Support</li>
+                  <li>Customer Support 24/7</li>
+                </div>
+                <div class="card-footer">
+                    <a href="add">purchase</a>
+                </div>
+              </div>
+              
+           </div>
+
+
+       </div>
+       </div>
+    </section> 
+
+
+
+
+
+    <section class="happyclient">
+      <div class= "container">
+      <div class=  "headings text-center">
+          <h1 class="text-center font-weight-bold">OUR HAPPY CLIENT</h1>
+          <h6 class="text-uppercase pt-2">our satisfied costomer says</h6>
+      </div>
+  
+      <div id="demo" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+      
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-md-4">
+                  <div class="box">
+                    <a href="#">
+                      <img src="offf.jpg" class="img-fluidi img-thumbnail" > 
+                    </a>
+
+                    <h6 class="m-4">A desktop is a term commonly used to describe a desktop computer or system unit.
+                      When referring to an operating system or GUI .</h6>
+                      <h1>Jyoti Ahirwar</h1>
+                      <h2>Web Devloper</h2>
+                  </div>
+
+              </div>
+              <div class="col-md-4">
+                <div class="box">
+                  <a href="#">
+                    <img src="offf.jpg" class="img-fluidi img-thumbnail"> 
+                  </a>
+
+                  <h6 class="m-4">A desktop is a term commonly used to describe a desktop computer or system unit.
+                    When referring to an operating system or GUI .</h6>
+                    <h1>Jyoti Ahirwar</h1>
+                    <h2>Web Devloper</h2>
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+              <div class="box">
+                <a href="#">
+                  <img src="offf.jpg" class="img-fluidi img-thumbnail"> 
+                </a>
+
+                <h6 class="m-4">A desktop is a term commonly used to describe a desktop computer or system unit.
+                  When referring to an operating system or GUI.</h6>
+                  <h1>Jyoti Ahirwar</h1>
+                  <h2>Web Devloper</h2>
+              </div>
+
+          </div>
+
+            </div>
+
+
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-4">
+                  <div class="box">
+                    <a href="#">
+                      <img src="offf.jpg" class="img-fluidi img-thumbnail"> 
+                    </a>
+
+                    <h6 class="m-4">A desktop is a term commonly used to describe a desktop computer or system unit.
+                      When referring to an operating system or GUI.</h6>
+                      <h1>Jyoti Ahirwar</h1>
+                      <h2>Web Devloper</h2>
+                  </div>
+
+              </div>
+              <div class="col-md-4">
+                <div class="box">
+                  <a href="#">
+                    <img src="offf.jpg" class="img-fluidi img-thumbnail"> 
+                  </a>
+
+                  <h6 class="m-4">A desktop is a term commonly used to describe a desktop computer or system unit.
+                    When referring to an operating system or GUI.</h6>
+                    <h1>Jyoti Ahirwar</h1>
+                    <h2>Web Devloper</h2>
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+              <div class="box">
+                <a href="#">
+                  <img src="offf.jpg" class="img-fluidi img-thumbnail"> 
+                </a>
+
+                <h6 class="m-4">A desktop is a term commonly used to describe a desktop computer or system unit.
+                  When referring to an operating system or GUI.</h6>
+                  <h1>Jyoti Ahirwar</h1>
+                  <h2>Web Devloper</h2>
+              </div>
+
+          </div>
+
+            </div>
+
+
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-4">
+                  <div class="box">
+                    <a href="#">
+                      <img src="offf.jpg" class="img-fluidi img-thumbnail"> 
+                    </a>
+
+                    <h6 class="m-4">A desktop is a term commonly used to describe a desktop computer or system unit.
+                      When referring to an operating system or GUI.</h6>
+                      <h1>Jyoti Ahirwar</h1>
+                      <h2>Web Devloper</h2>
+                  </div>
+
+              </div>
+              <div class="col-md-4">
+                <div class="box">
+                  <a href="#">
+                    <img src="offf.jpg" class="img-fluidi img-thumbnail"> 
+                  </a>
+
+                  <h6 class="m-4">A desktop is a term commonly used to describe a desktop computer or system unit.
+                    When referring to an operating system or GUI.</h6>
+                    <h1>Jyoti Ahirwar</h1>
+                    <h2>Web Devloper</h2>
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+              <div class="box">
+                <a href="#">
+                  <img src="offf.jpg" class="img-fluidi img-thumbnail"> 
+                </a>
+
+                <h6 class="m-4">A desktop is a term commonly used to describe a desktop computer or system unit.
+                  When referring to an operating system or GUI.</h6>
+                  <h1>Jyoti Ahirwar</h1>
+                  <h2>Web Devloper</h2>
+              </div>
+
+          </div>
+
+            </div>
+
+
+          </div>
+        </div>
+      
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      
+      </div>
+      
+        
+
+
+      </div>
+      </section>
+
+
+      <section class="contact" id="contact">
+        <div class= "container">
+        <div class=  "headings text-center">
+            <h1 class="text-center font-weight-bold">CONTACT US</h1>
+            <h6>
+              We are Here To Help And Answer Any Question You Might Have.We Look Forward To Hearing From You.
+            </h6>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 col-mg-8 col-10 offset-lg-2 offset-mg-2 col-1"
+        <form class="contact" action="index.html">
+          <div class="form-groups">
+          <input type="text" name="name" class="form-control" placeholder="enter your name" required autocomplete="off"><br>
+          <input type="email" name="email" class="form-control" placeholder="enter your email" required autocomplete="off"><br>
+         <input type="text" name="phone" class="form-control" placeholder="enter phone number" required autocomplete="off"><br>
+  
+          <textarea class="form-control" placeholder="message" rows="3"></textarea><br>
+          <a href="#" class="form-btn">Submit</a>
+          </div>
+          </form>
+            </div>
+            </div>
+            </section>
+
+            <section class="News" id="news">
+              <div class= "container">
+              <div class=  "headings text-center">
+                  <h1 class="text-center font-weight-bold">SUBSCRIBE TO OUR NEWSLETTER</h1>
+                  
+              </div>
+            <div class="row">
+              <div class="col-lg-8  offset-lg-2 col-12">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control new-letter" placeholder="Your Email">
+                  <div class="input-group-append">
+                    <span class="input-group-text">SUBSCRIBE</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+              
+            </div>
+              </section>
+
+
+
+
+              <section class="footer">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4 text-center headings">
+                      <h1 class="text-white">ABOUT WEBSITE</h1>
+                      
+                      <h6>A desktop is a term commonly used to describe a desktop computer or system unit.
+                        When referring to an operating system or GUI (graphical user interface),
+                         the desktop is a system of organization of icons on a screen.
+                      </h6>
+                      
+                    </div>
+                    
+                    <div class="col-md-4 text-center headings">
+                      <h1 class="text-white">NAVIGATION LINKS</h1>
+                      <li>Home</li>
+                      <li>service</li>
+                      <li>price</li>
+                      <li>about</li>
+                    </div>
+                    
+                
+                    <div class="col-md-4 text-center headings">
+                      <h1 class="text-white">NEWSLETTER</h1>
+                      <h6>A desktop is a term commonly used to describe a desktop computer or system unit.
+                        When referring to an operating system or GUI.
+                      </h6>
+
+                      <div class="input-group mb-3">
+                        <input type="text" class="form-control new-letter" placeholder="Your Email">
+                        <div class="input-group-append">
+                          <span class="input-group-text">SUBSCRIBE</span>
+                        </div>
+                      </div>
+          
+                    </div>
+                
+                
+                
+                  </div>
+                </div>
+                </section>
+                
+
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/counter-up/1.0.0/jquery.counterup.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
+
+
+
+    </body>
+    </html>
